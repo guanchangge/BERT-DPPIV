@@ -10,6 +10,9 @@ from run_classifier import create_model, file_based_input_fn_builder, ColaProces
 
 
 def fasta2record(input_file, output_file, vocab_file, kmer=1):
+    # This function gets an input_file which is .fasta
+    # This function returns the numbers of sequences in input_file
+    # This function will check if the input_file is right
     with open(input_file) as f:
         lines = f.readlines()
     for index, line in enumerate(lines):
@@ -39,6 +42,7 @@ def fasta2record(input_file, output_file, vocab_file, kmer=1):
     processor = ColaProcessor()
     label_list = processor.get_labels()
     examples = processor.ljy_get_dev_examples("temp.tsv")
+    print(examples)
     train_file = "predict.tf_record"
     tokenizer = tokenization.FullTokenizer(
         vocab_file=vocab_file, do_lower_case=True)
@@ -74,7 +78,7 @@ def main(data_name, out_file, model_path, kmer=1, config_file="./bert_config_1.j
     tvars = tf.trainable_variables()
     initialized_variable_names = {}
     (assignment_map, initialized_variable_names
-     ) = modeling.get_assignment_map_from_checkpoint(tvars, init_checkpoint)
+    ) = modeling.get_assignment_map_from_checkpoint(tvars, init_checkpoint)
     tf.train.init_from_checkpoint(init_checkpoint, assignment_map)
     name_to_features = {
         "input_ids": tf.FixedLenFeature([seq_length], tf.int64),
@@ -132,9 +136,10 @@ def main(data_name, out_file, model_path, kmer=1, config_file="./bert_config_1.j
                 f.write(line.strip() + " " + str(all_prob[index])+" "+str(all_pre_labels[index]) + "\n")
                 index += 1
 
-if __name__ == '__main__':      
+
+if __name__ == '__main__':
     main(data_name="./synthensis_peptide.fasta",
-         out_file="pre_result/new_model/DPPIV_k1r.txt",
+         out_file="pre_result/new_model/DPPIV_k1r_rr.txt",
          model_path="out/1kmer_all_data_50_r/model.ckpt",
          kmer=1,
          config_file="./bert_config_1.json",
