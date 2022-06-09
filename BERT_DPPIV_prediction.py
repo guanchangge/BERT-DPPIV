@@ -23,23 +23,23 @@ def fasta2record(input_file, output_file, vocab_file, kmer=1):
                 print("Row " + str(index + 1) + " is wrong!")
                 exit()
     seq_num = int(len(lines) / 2)
-    with open("temp.tsv", "w") as f:
+    with open("predict.tsv", "w") as f:
         for line in lines:
             if line[0] != ">":
                 seq = ""
                 line= line.strip()
                 length = len(line)
-             
+                # step = 1
                 for i in range(0, length, kmer):
                     if length - i >= kmer:
                         seq += line[i:i+kmer] + " "
                     else:
                         seq += line[i:] + " "
                 seq += "\n"
-                f.write("train\t1\t\t" + seq)
+                f.write("train\t0\t\t" + seq)
     processor = ColaProcessor()
     label_list = processor.get_labels()
-    examples = processor.ljy_get_dev_examples("temp.tsv")
+    examples = processor.get_predict_examples("./")
     print(examples)
     train_file = "predict.tf_record"
     tokenizer = tokenization.FullTokenizer(
@@ -123,6 +123,7 @@ def main(data_name, out_file, model_path, kmer=1, config_file="./bert_config_1.j
             all_prob.extend(prob[:, 1].tolist())
             pre_labels = np.argmax(prob, axis=-1).tolist()
             all_pre_labels.extend(pre_labels)
+    print(all_prob)
     with open(data_name) as f:
         lines = f.readlines()
     with open(out_file, "w") as f:
