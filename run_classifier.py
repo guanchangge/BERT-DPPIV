@@ -337,9 +337,9 @@ class MrpcProcessor(DataProcessor):
 class ColaProcessor(DataProcessor):
     """Processor for the CoLA data set (GLUE version)."""
 
-    def ljy_get_dev_examples(self, file_name):
+    def get_predict_examples(self, data_dir):
         return self._create_examples(
-            self._read_tsv(file_name), "dev")
+            self._read_tsv(os.path.join(data_dir, "predict.tsv")), "predict")
 
     def get_train_examples(self, data_dir):
         """See base class."""
