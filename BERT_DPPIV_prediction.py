@@ -29,7 +29,7 @@ def fasta2record(input_file, output_file, vocab_file, kmer=1):
                 seq = ""
                 line= line.strip()
                 length = len(line)
-                # step = 1
+             
                 for i in range(0, length, kmer):
                     if length - i >= kmer:
                         seq += line[i:i+kmer] + " "
