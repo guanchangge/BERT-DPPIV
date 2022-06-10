@@ -21,7 +21,7 @@ chmod 764 ./pre_train.sh
 ./pre_train.sh
 ```
 # Fine-tune
-When you ready to fine-tune the model , you should run the following code
+When you ready to fine-tune the model , you should run the following code. The format of positive file and negative file is fasta file.
 ```
 python fine_tune_model.py \
 --do_eval True \
