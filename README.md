@@ -3,7 +3,7 @@ A novel attention-based peptide language model for DPP-IV inhibitory peptide ide
 This is a model for DPP-IV inhibitory peptides recognition and prediction based on BERT which is proposed by Google AI. We pre-train a BERT model through amount of proteins sequences downloaded from UniPort and fine-tune the model on DPP-IV dataset and evaluate its performance.
 
 The pre-train model can be downloaded from the link below：
-https://drive.google.com/file/d/1lR0DslcUL3Ui3JA6ufgN8_LugIs6EV1I/view?usp=sharing
+>https://drive.google.com/file/d/1lR0DslcUL3Ui3JA6ufgN8_LugIs6EV1I/view?usp=sharing
 The fine-tune model can be downloaded from the link below：
 >https://drive.google.com/file/d/1qmnBZ7AvJfXSMersmAPge5Xe3NCE-ygL/view?usp=sharing
 If you want to pre-train the BERT model, you should download the pre-train data from the link below: >https://drive.google.com/file/d/1QeXWV5_OIKgms7u5ShNfvPEKPBLOC3UT/view?usp=sharing. 
