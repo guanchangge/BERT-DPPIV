@@ -139,7 +139,7 @@ def main(data_name, out_file, model_path, kmer=1, config_file="./bert_config_1.j
 if __name__ == '__main__':
     main(data_name="./synthensis_peptide.fasta",
          out_file="Pre_result/new_model/DPPIV_k1.txt",
-         model_path="./Fine_tune_data/1kmer_data/model.ckpt",
+         model_path="./fine_tune_model/1kmer_fine_tune_model/model.ckpt",
          kmer=1,
          config_file="./bert_config_1.json",
          vocab_file="./vocab/vocab_1kmer.txt")
