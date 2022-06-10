@@ -8,20 +8,21 @@ If you want to pre-train the BERT model, you should download the pre-train data 
 # Pre-training
 
 You should use the script pretrain_data_creating.sh to preprocess the pre-train data.
-'''
+
+```
 chmod 764 ./pretrain_data_creating.sh
 
 ./pretrain_data_creating.sh
-'''
+```
 After preprocessing the data, then you can use the script pre_train.sh to pre-train the BERT model.
-'''
+```
 chmod 764 ./pre_train.sh
 
 ./pre_train.sh
-'''
+```
 # Fine-tune
 When you ready to fine-tune the model , you should run the following code
-'''
+```
 python fine_tune_model.py \
 --do_eval True \
 --do_save_model True \
@@ -40,7 +41,7 @@ python fine_tune_model.py \
 --init_checkpoint ./model/1kmer_model/model.ckpt \
 --bert_config ./bert_config_1.json \
 --save_path ./fine_tune_model/1kmer_fine_tune_model/model.ckpt
-'''
+```
 The meaning of each parameter is as follows, you should change these according to your needs. You can also open file fine_tune_model.py and change the  these parameters.
 
 > do_eval: whether to evaluate the model after training\
