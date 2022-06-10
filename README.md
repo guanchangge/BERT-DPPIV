@@ -8,7 +8,8 @@ The pre-train model can be downloaded from the link below：
 The fine-tune model can be downloaded from the link below：
 >https://drive.google.com/file/d/1qmnBZ7AvJfXSMersmAPge5Xe3NCE-ygL/view?usp=sharing.
 
-If you want to pre-train the BERT model, you should download the pre-train data from the link below: >https://drive.google.com/file/d/1QeXWV5_OIKgms7u5ShNfvPEKPBLOC3UT/view?usp=sharing. 
+If you want to pre-train the BERT model, you should download the pre-train data from the link below:
+>https://drive.google.com/file/d/1QeXWV5_OIKgms7u5ShNfvPEKPBLOC3UT/view?usp=sharing. 
 
 # Pre-training
 
