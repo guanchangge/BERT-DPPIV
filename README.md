@@ -71,9 +71,11 @@ The meaning of each parameter is as follows, you should change these according t
 # Prediction
 
 You can predict your peptides data by command
-'''
+
+```
 python BERT_DPPIV_prediction.py
-'''
+```
+
 You should change the codes in row 140-145 according to your needs.
 
 > data_name: location of the testing set\
