@@ -66,7 +66,7 @@ The meaning of each parameter is as follows, you should change these according t
 > vocab_file: location of dictionary\
 > init_checkpoint: initialization node of the model\
 > bert_config: BERT configuration\
-> save_path: where to save the trained model\
+> save_path: where to save the trained model
 
 # Prediction
 
@@ -81,4 +81,4 @@ You should change the codes in row 140-145 according to your needs.
 > model_path: the location of the trained model\
 > kmer: the type of word segmentation\
 > config_file: BERT configuration\
-> vocab_file: location of dictionary\
+> vocab_file: location of dictionary
