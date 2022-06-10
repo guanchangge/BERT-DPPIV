@@ -14,6 +14,7 @@ tar -zxvf fine_tune_model.tar.gz
 ```
 If you want to pre-train the BERT model, you should download the pre-train data from the link below:
 >https://drive.google.com/file/d/1QeXWV5_OIKgms7u5ShNfvPEKPBLOC3UT/view?usp=sharing. 
+
 Then you should put the data into pre_train_data folder.
 # Pre-training
 
