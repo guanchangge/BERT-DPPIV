@@ -16,14 +16,10 @@ If you want to pre-train the BERT model, you should download the pre-train data 
 You should use the script pretrain_data_creating.sh to preprocess the pre-train data.
 
 ```
-chmod 764 ./pretrain_data_creating.sh
-
 ./pretrain_data_creating.sh
 ```
 After preprocessing the data, then you can use the script pre_train.sh to pre-train the BERT model.
 ```
-chmod 764 ./pre_train.sh
-
 ./pre_train.sh
 ```
 # Fine-tune
