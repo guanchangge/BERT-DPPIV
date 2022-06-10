@@ -42,23 +42,23 @@ python fine_tune_model.py \
 
 The meaning of each parameter is as follows, you should change these according to your needs. You can also open file fine_tune_model.py and change the  these parameters.
 
-do_eval: whether to evaluate the model after training
-do_save_model: whether to save the model after training
-data_name: the name of the training set
-batch_size: batch size
-num_train_epochs: training epochs
-warmup_proportion: proportion of warmup
-learning_rate: learning rate
-using_tpu: Whether to use TPU
-seq_length: sequence length
-data_root: the location of the training set to be used
-positive_file: The name of file containing the positive trian data
-negative_file: The name of file containing the negative trian data
-kmer: The type of word segmentation
-vocab_file: location of dictionary
-init_checkpoint: initialization node of the model
-bert_config: BERT configuration
-save_path: where to save the trained model
+do_eval: whether to evaluate the model after training\
+do_save_model: whether to save the model after training\
+data_name: the name of the training set\
+batch_size: batch size\
+num_train_epochs: training epochs\
+warmup_proportion: proportion of warmup\
+learning_rate: learning rate\
+using_tpu: Whether to use TPU\
+seq_length: sequence length\
+data_root: the location of the training set to be used\
+positive_file: The name of file containing the positive trian data\
+negative_file: The name of file containing the negative trian data\
+kmer: The type of word segmentation\
+vocab_file: location of dictionary\
+init_checkpoint: initialization node of the model\
+bert_config: BERT configuration\
+save_path: where to save the trained model\
 
 # Prediction
 
@@ -68,9 +68,9 @@ python BERT_DPPIV_prediction.py
 
 You should change the codes in row 140-145 according to your needs.
 
-data_name: location of the testing set
-out_file: storage location of test results
-model_path: the location of the trained model
-kmer: the type of word segmentation
-config_file: BERT configuration
-vocab_file: location of dictionary
+data_name: location of the testing set\
+out_file: storage location of test results\
+model_path: the location of the trained model\
+kmer: the type of word segmentation\
+config_file: BERT configuration\
+vocab_file: location of dictionary\
