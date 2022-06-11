@@ -24,7 +24,7 @@ You should use the script pretrain_data_creating.sh to preprocess the pre-train 
 ./pretrain_data_creating.sh
 ```
 If you don't want to cost time to preprocess the pre-train data, you can download our preprocessed data from link below:
-
+>https://drive.google.com/file/d/1dDoWLFAfd4JL3vZfUX-Tb4LLtlOjpRJz/view?usp=sharing.
 After preprocessing the data, then you can use the script pre_train.sh to pre-train the BERT model.
 ```
 ./pre_train.sh
