@@ -31,7 +31,7 @@ tf.app.flags.DEFINE_string('kmer', '2', 'The type of word embedding')
 tf.app.flags.DEFINE_string('vocab_file', './vocab/vocab_2kmer.txt', 'Dictionary location')
 tf.app.flags.DEFINE_string('init_checkpoint', "./model/2kmer_model/model.ckpt", 'Initialization node of the model')
 tf.app.flags.DEFINE_string('bert_config', "./bert_config_2.json", 'Bert configuration')
-tf.app.flags.DEFINE_string('save_path', "./out/overlap_model/model.ckpt", 'Save location of pre-trained model')
+tf.app.flags.DEFINE_string('save_path', "./out/overlap_model/model.ckpt", 'Save location of fine-tune model')
 
 
 def main():
