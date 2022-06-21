@@ -123,7 +123,7 @@ def main(data_name, out_file, model_path, kmer=1, config_file="./bert_config_1.j
             all_prob.extend(prob[:, 1].tolist())
             pre_labels = np.argmax(prob, axis=-1).tolist()
             all_pre_labels.extend(pre_labels)
-    print(all_prob)
+   
     with open(data_name) as f:
         lines = f.readlines()
     with open(out_file, "w") as f:
